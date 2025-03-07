@@ -39,9 +39,25 @@ dependencies {
     // Actuator
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
+    // AOP Observation
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+    implementation 'io.micrometer:micrometer-observation'
 
+    // Log to Loki
+    implementation 'com.github.loki4j:loki-logback-appender:1.6.0'
+
+    // Tempo 연동
+    implementation 'io.micrometer:micrometer-tracing-bridge-brave'
+    implementation 'io.zipkin.reporter2:zipkin-reporter-brave'
+
+    implementation 'net.ttddyy.observation:datasource-micrometer-spring-boot:1.0.1' // DB 모니터링
 }
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+gitProperties {
+    dateFormat = "yyyy-MM-dd HH:mm:ss XXX"
+    dateFormatTimeZone = "Asia/Seoul"
 }
