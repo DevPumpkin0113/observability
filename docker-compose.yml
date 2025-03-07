@@ -1,6 +1,6 @@
 services:
   springboot:
-    image: gpemvjtmxm/stuv-app:latest
+    image: gpemvjtmxm/test-app:latest
     container_name: test-app
     restart: always
     env_file:
