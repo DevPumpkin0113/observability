@@ -1,0 +1,38 @@
+info:
+  app:
+    name: TEST
+    company: DevPumpkin
+spring:
+  application:
+    name: test
+  profiles:
+    active: local
+  config:
+    import: optional:file:.env[.properties]
+server:
+  shutdown: graceful
+  servlet:
+    session:
+      timeout: 0
+management:
+  server:
+    port: 8080
+  info:
+    java:
+      enabled: true
+    os:
+      enabled: true
+    env:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "health, info, loggers, metrics, prometheus"
+---
+spring:
+  config:
+    activate:
+      on-profile: local
