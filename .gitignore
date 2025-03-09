@@ -38,4 +38,7 @@ out/
 .vscode/
 
 ### Tempo ###
-docker/tempo/tempo-data
+docker/grafana/volume
+docker/loki/volume
+docker/tempo/volume
+docker/prometheus/volume
