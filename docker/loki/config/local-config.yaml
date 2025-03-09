@@ -2,8 +2,8 @@ auth_enabled: false
 
 server:
   http_listen_port: 3100
-  http_server_read_timeout: 3m
-  http_server_write_timeout: 3m
+  http_server_read_timeout: 1m
+  http_server_write_timeout: 1m
   grpc_server_max_send_msg_size: 2147483647
   grpc_server_max_recv_msg_size: 2147483647
 
